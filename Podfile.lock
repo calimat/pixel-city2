@@ -1,0 +1,16 @@
+PODS:
+  - Alamofire (4.5.0)
+  - AlamofireImage (3.2.0):
+    - Alamofire (~> 4.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - AlamofireImage (~> 3.1)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+
+PODFILE CHECKSUM: c61085e8e0dfc889ab97b518b632c7f68e286c06
+
+COCOAPODS: 1.4.0
