@@ -10,6 +10,7 @@
 		816A637A81A2C656E1CC0B25 /* Pods_pixel_city.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E82804721BDB050090E8278 /* Pods_pixel_city.framework */; };
 		F67F84042033F005005FEAF2 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F84032033F005005FEAF2 /* DroppablePin.swift */; };
 		F67F84062035218B005FEAF2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F84052035218B005FEAF2 /* PhotoCell.swift */; };
+		F67F8408203524F5005FEAF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F8407203524F5005FEAF2 /* Constants.swift */; };
 		F6F890A22033DA7F00EEA10C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F890A12033DA7F00EEA10C /* AppDelegate.swift */; };
 		F6F890A42033DA7F00EEA10C /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F890A32033DA7F00EEA10C /* MapVC.swift */; };
 		F6F890A72033DA7F00EEA10C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F890A52033DA7F00EEA10C /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		AE7C063A2986D2BE3E0734C2 /* Pods-pixel-city.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixel-city.release.xcconfig"; path = "Pods/Target Support Files/Pods-pixel-city/Pods-pixel-city.release.xcconfig"; sourceTree = "<group>"; };
 		F67F84032033F005005FEAF2 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		F67F84052035218B005FEAF2 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		F67F8407203524F5005FEAF2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F6F8909E2033DA7F00EEA10C /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F890A12033DA7F00EEA10C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6F890A32033DA7F00EEA10C /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		F6F890B62033DBA200EEA10C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F67F8407203524F5005FEAF2 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67F8408203524F5005FEAF2 /* Constants.swift in Sources */,
 				F67F84062035218B005FEAF2 /* PhotoCell.swift in Sources */,
 				F6F890A42033DA7F00EEA10C /* MapVC.swift in Sources */,
 				F67F84042033F005005FEAF2 /* DroppablePin.swift in Sources */,
