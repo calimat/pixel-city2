@@ -247,12 +247,11 @@ extension MapVC: CLLocationManagerDelegate {
 extension MapVC: UICollectionViewDelegate , UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return imageArray.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // number of items in array
-        return imageArray.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
