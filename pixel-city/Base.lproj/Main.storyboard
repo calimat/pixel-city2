@@ -122,19 +122,34 @@
                                     <constraint firstAttribute="width" constant="200" id="wSx-x3-oc9"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpN-RJ-cH1">
+                                <rect key="frame" x="143.5" y="20" width="88" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tpC-mR-NpL">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BpN-RJ-cH1" firstAttribute="top" secondItem="pOz-87-7Fr" secondAttribute="topMargin" constant="20" id="20f-G0-rU5"/>
                             <constraint firstItem="9xG-Mw-KCZ" firstAttribute="top" secondItem="pOz-87-7Fr" secondAttribute="top" id="3S0-f5-B08"/>
+                            <constraint firstItem="tpC-mR-NpL" firstAttribute="centerY" secondItem="pOz-87-7Fr" secondAttribute="centerY" id="4bB-Gu-Bca"/>
                             <constraint firstAttribute="trailing" secondItem="9xG-Mw-KCZ" secondAttribute="trailing" id="AG0-k0-xBC"/>
                             <constraint firstAttribute="bottom" secondItem="9xG-Mw-KCZ" secondAttribute="bottom" id="IY4-Ks-dtC"/>
                             <constraint firstAttribute="bottomMargin" secondItem="UHh-ZO-0BF" secondAttribute="bottom" constant="20" id="c9p-Tp-m8g"/>
                             <constraint firstItem="9xG-Mw-KCZ" firstAttribute="leading" secondItem="pOz-87-7Fr" secondAttribute="leading" id="lcF-zG-3gg"/>
                             <constraint firstItem="UHh-ZO-0BF" firstAttribute="centerX" secondItem="pOz-87-7Fr" secondAttribute="centerX" id="n2T-Jq-l9g"/>
+                            <constraint firstItem="tpC-mR-NpL" firstAttribute="centerX" secondItem="pOz-87-7Fr" secondAttribute="centerX" id="oW4-ER-Y4v"/>
+                            <constraint firstItem="BpN-RJ-cH1" firstAttribute="centerX" secondItem="pOz-87-7Fr" secondAttribute="centerX" id="wet-IN-cne"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageTitleLbl" destination="BpN-RJ-cH1" id="bJu-J5-Cw5"/>
                         <outlet property="popImageView" destination="9xG-Mw-KCZ" id="0fZ-du-apR"/>
+                        <outlet property="spinner" destination="tpC-mR-NpL" id="IS3-Ds-hPR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdS-oG-v3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
