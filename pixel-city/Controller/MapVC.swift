@@ -35,6 +35,7 @@ class MapVC: UIViewController, UIGestureRecognizerDelegate {
     var imageUrlArray = [String]()
     var imageArray = [UIImage]()
     var imageidArray = [String]()
+    var viewsCountArray = [String]()
     
     
     override func viewDidLoad() {
@@ -153,6 +154,7 @@ extension MapVC: MKMapViewDelegate {
         
         imageUrlArray = []
         imageArray = []
+        viewsCountArray = []
         
         collectionView?.reloadData()
         
@@ -209,9 +211,26 @@ extension MapVC: MKMapViewDelegate {
                 let id = "\(photo["id"]!)"
                 self.imageidArray.append(id)
                 
+                self.retrieveViewsCountArray(forImageId: id, handler: { (finished) in
+                    if finished {
+                        //Do something
+                        
+                    }
+                })
+                
                // print(postUrl)
             }
             
+            handler(true)
+        }
+    }
+    
+    func retrieveViewsCountArray(forImageId imageId:String,  handler: @escaping (_ status:Bool) ->() ) {
+        Alamofire.request(flikrUrlgetInfo(forApiKey: apiKey, withImageId: imageId)).responseJSON { (response) in
+            guard let json = response.result.value as? Dictionary<String, Any> else { return }
+            guard let photoInfo = json["photo"] as? Dictionary<String,Any> else { return }
+            guard let viewsCount = photoInfo["views"] as? String else { return}
+            self.viewsCountArray.append(viewsCount)
             handler(true)
         }
     }
@@ -270,7 +289,23 @@ extension MapVC: UICollectionViewDelegate , UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
         let imageFromIndex = imageArray[indexPath.row]
         let imageView = UIImageView(image: imageFromIndex)
+        
+        let label = UILabel(frame: CGRect(x:0, y: 0, width: 40 , height: 40))
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        label.font = UIFont(name: "Avenir Next", size: 8)
+        label.text = self.viewsCountArray[indexPath.row];
+        
+        
+        let contentView = UIView(frame: CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height))
+        contentView.layer.cornerRadius = contentView.frame.width /  2
+        contentView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        contentView.clipsToBounds = true
+        
         cell.addSubview(imageView)
+        cell.addSubview(contentView)
+         cell.addSubview(label)
         return cell
         
     }

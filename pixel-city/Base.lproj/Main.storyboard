@@ -135,7 +135,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted on: Jan 14 2018  at 8:12 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWg-3l-SiF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted on: Jan 14 2018  at 8:12 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWg-3l-SiF">
                                         <rect key="frame" x="16" y="88" width="343" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,11 +161,19 @@
                                     <constraint firstItem="BpN-RJ-cH1" firstAttribute="top" secondItem="B4J-0A-K9s" secondAttribute="top" constant="5" id="yFg-Jx-0q9"/>
                                 </constraints>
                             </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QYB-bZ-jsO">
+                                <rect key="frame" x="21" y="145" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3XW-w8-ozi"/>
+                                    <constraint firstAttribute="width" constant="80" id="gel-QF-Pq1"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9xG-Mw-KCZ" firstAttribute="top" secondItem="pOz-87-7Fr" secondAttribute="top" id="3S0-f5-B08"/>
                             <constraint firstItem="tpC-mR-NpL" firstAttribute="centerY" secondItem="pOz-87-7Fr" secondAttribute="centerY" id="4bB-Gu-Bca"/>
+                            <constraint firstItem="QYB-bZ-jsO" firstAttribute="top" secondItem="B4J-0A-K9s" secondAttribute="bottom" constant="5" id="8XV-lB-ebq"/>
                             <constraint firstAttribute="trailing" secondItem="9xG-Mw-KCZ" secondAttribute="trailing" id="AG0-k0-xBC"/>
                             <constraint firstItem="B4J-0A-K9s" firstAttribute="top" secondItem="pOz-87-7Fr" secondAttribute="top" id="Cww-cd-bR6"/>
                             <constraint firstItem="B4J-0A-K9s" firstAttribute="leading" secondItem="pOz-87-7Fr" secondAttribute="leading" id="F0m-L2-nuA"/>
@@ -175,11 +183,13 @@
                             <constraint firstItem="9xG-Mw-KCZ" firstAttribute="leading" secondItem="pOz-87-7Fr" secondAttribute="leading" id="lcF-zG-3gg"/>
                             <constraint firstItem="UHh-ZO-0BF" firstAttribute="centerX" secondItem="pOz-87-7Fr" secondAttribute="centerX" id="n2T-Jq-l9g"/>
                             <constraint firstItem="tpC-mR-NpL" firstAttribute="centerX" secondItem="pOz-87-7Fr" secondAttribute="centerX" id="oW4-ER-Y4v"/>
+                            <constraint firstItem="QYB-bZ-jsO" firstAttribute="leading" secondItem="pOz-87-7Fr" secondAttribute="leadingMargin" constant="5" id="z4t-zJ-rOo"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageTitleLbl" destination="BpN-RJ-cH1" id="bJu-J5-Cw5"/>
                         <outlet property="imgDescriptionLbl" destination="seD-Az-2MH" id="9g6-RR-6gj"/>
+                        <outlet property="mapView" destination="QYB-bZ-jsO" id="zC3-CV-Q0P"/>
                         <outlet property="popImageView" destination="9xG-Mw-KCZ" id="0fZ-du-apR"/>
                         <outlet property="postedDateLbl" destination="nWg-3l-SiF" id="Jwi-f7-hGQ"/>
                         <outlet property="spinner" destination="tpC-mR-NpL" id="IS3-Ds-hPR"/>
